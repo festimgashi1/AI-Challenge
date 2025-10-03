@@ -5,7 +5,6 @@ print("=== Text Classification Predictor ===")
 print("Loading model...")
 
 try:
-    # Load the trained model and vectorizer
     model = joblib.load('models/text_classifier.pkl')
     tfidf = joblib.load('models/tfidf_vectorizer.pkl')
     print("Model loaded successfully!")
@@ -14,16 +13,13 @@ except:
     exit()
 
 def predict_text(text):
-    # Transform the input text
     text_tfidf = tfidf.transform([text])
     
-    # Make prediction
     prediction = model.predict(text_tfidf)[0]
     probability = model.predict_proba(text_tfidf)[0]
     
     return prediction, probability
 
-# Interactive prediction
 print("\n🔍 Type any message to classify it as SPAM or HAM")
 print("Type 'quit' to exit\n")
 
