@@ -1,0 +1,20 @@
+{
+    "name": "linkplus/ai-test",
+    "description": "Text Classification Challenge",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4":{"TextClassification\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Festim Gashi",
+            "email": "festimi2005gashi@gmail.com"
+        }
+    ]
+}
